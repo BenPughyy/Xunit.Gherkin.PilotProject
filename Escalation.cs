@@ -8,13 +8,13 @@ namespace Xunit.Gherkin.PilotProject
     {
         public Calculator escCalc = new Calculator();
 
-        [Given(@"I chose (\d+) as first number")]
+        [Given(@"I chose {double} as first number")]
         public void I_chose_first_number(int firstNumber)
         {
             escCalc.SetFirstNumber(firstNumber);
         }
 
-        [And(@"I chose (\d+) as escalation value")]
+        [And(@"I chose {double} as escalation value")]
         public void I_chose_second_number(int secondNumber)
         {
             escCalc.SetSecondNumber(secondNumber);
@@ -26,7 +26,7 @@ namespace Xunit.Gherkin.PilotProject
             escCalc.calcEscalation();
         }
 
-        [Then(@"the result should return (\d+) on the screen")]
+        [Then(@"the result should return {double} on the screen")]
         public void The_result_should_be_z_on_the_screen(int expectedResult)
         {
             var actualResult = escCalc.Result;
