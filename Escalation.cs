@@ -8,7 +8,7 @@ namespace Xunit.Gherkin.PilotProject
     {
         public Calculator escCalc = new Calculator();
 
-        [Given (@"I chose (/d+) as the value")]
+        [Given(@"I chose (/d+) as first number")]
         public void I_chose_first_number(int firstNumber)
         {
             escCalc.SetFirstNumber(firstNumber);

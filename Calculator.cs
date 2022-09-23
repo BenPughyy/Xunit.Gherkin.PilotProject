@@ -8,9 +8,9 @@ namespace Xunit.Gherkin.PilotProject
 {
     public class Calculator
     {
-        public int firstNumber;
-        public int secondNumber;
-        public int Result;
+        public double firstNumber;
+        public double secondNumber;
+        public double Result;
         public Calculator()
         {
             
@@ -33,7 +33,7 @@ namespace Xunit.Gherkin.PilotProject
         }
         public void calcEscalation()
         {
-            Result = firstNumber * (100+secondNumber);
+            Result = firstNumber * (secondNumber/100);
         }
     }
 }
