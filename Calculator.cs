@@ -33,7 +33,7 @@ namespace Xunit.Gherkin.PilotProject
         }
         public void calcEscalation()
         {
-            Result = firstNumber * (secondNumber/100);
+            Result = firstNumber + (firstNumber * (secondNumber/100));
         }
     }
 }
