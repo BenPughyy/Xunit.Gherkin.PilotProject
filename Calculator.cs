@@ -31,5 +31,9 @@ namespace Xunit.Gherkin.PilotProject
         {
             this.secondNumber = secondNumber; 
         }
+        public void calcEscalation()
+        {
+            Result = firstNumber * (100+secondNumber);
+        }
     }
 }
