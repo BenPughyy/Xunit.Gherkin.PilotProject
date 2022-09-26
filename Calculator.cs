@@ -11,6 +11,8 @@ namespace Xunit.Gherkin.PilotProject
         public double firstNumber;
         public double secondNumber;
         public double Result;
+        public DateTime startDate;
+        public DateTime endDate;
         public Calculator()
         {
             
@@ -34,6 +36,18 @@ namespace Xunit.Gherkin.PilotProject
         public void calcEscalation()
         {
             Result = firstNumber + (firstNumber * (secondNumber/100));
+        }
+        public void SetStartDate(DateTime startDate)
+        {
+            this.startDate = startDate;
+        }
+        public void SetEndDate(DateTime endDate)
+        {
+            this.endDate = endDate;
+        }
+        public void calcPeriodLengthInDays()
+        {
+            Result = (endDate - startDate).Days;
         }
     }
 }
