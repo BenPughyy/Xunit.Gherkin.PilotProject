@@ -23,11 +23,11 @@ namespace Xunit.Gherkin.PilotProject
         {
             Result = firstNumber * secondNumber;
         }
-        public void SetFirstNumber(int firstNumber)
+        public void SetFirstNumber(double firstNumber)
         {
             this.firstNumber = firstNumber;
         }
-        public void SetSecondNumber(int secondNumber)
+        public void SetSecondNumber(double secondNumber)
         {
             this.secondNumber = secondNumber; 
         }
