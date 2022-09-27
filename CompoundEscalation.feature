@@ -1,4 +1,4 @@
-﻿Feature: Coumpound Escalation
+﻿Feature: Compound Escalation
 	In order to learn about the price increase
 	As a concerned citizen
 	I want to apply compound escalation to a value using the Calculator

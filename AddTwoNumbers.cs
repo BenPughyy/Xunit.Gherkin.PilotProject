@@ -8,13 +8,13 @@ namespace Xunit.Gherkin.PilotProject
     {
         public Calculator _calculator = new Calculator();
 
-        [Given(@"I chose (\d+) as first number")]
+        [Given(@"I chose {int} as first number")]
         public void I_chose_first_number(int firstNumber)
         {
             _calculator.SetFirstNumber(firstNumber);
         }
 
-        [And(@"I chose (\d+) as second number")]
+        [And(@"I chose {int} as second number")]
         public void I_chose_second_number(int secondNumber)
         {
             _calculator.SetSecondNumber(secondNumber);
@@ -26,7 +26,7 @@ namespace Xunit.Gherkin.PilotProject
             _calculator.AddNumbers();
         }
 
-        [Then(@"the result should be (\d+) on the screen")]
+        [Then(@"the result should be {int} on the screen")]
         public void The_result_should_be_z_on_the_screen(int expectedResult)
         {
             var actualResult = _calculator.Result;
