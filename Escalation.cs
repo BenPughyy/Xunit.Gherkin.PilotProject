@@ -25,7 +25,7 @@ namespace Xunit.Gherkin.PilotProject
         [When(@"I press calculate")]
         public void I_press_calc()
         {
-            escCalc.calcEscalation();
+            escCalc.calcLinearEscalation();
         }
 
         [Then(@"the result should return {float} on the screen")]

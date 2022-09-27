@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Xunit.Gherkin.PilotProject
+﻿namespace Xunit.Gherkin.PilotProject
 {
     public class Calculator
     {
@@ -13,6 +7,8 @@ namespace Xunit.Gherkin.PilotProject
         public double Result;
         public DateTime startDate;
         public DateTime endDate;
+        public int escalationYears;
+        public double interestRate;
         public Calculator()
         {
             
@@ -33,9 +29,22 @@ namespace Xunit.Gherkin.PilotProject
         {
             this.secondNumber = secondNumber; 
         }
-        public void calcEscalation()
+        public void calcLinearEscalation()
         {
             Result = firstNumber + (firstNumber * (secondNumber/100));
+        }
+        public void SetEscalationYears(int escalationYears)
+        {
+            this.escalationYears = escalationYears;
+        }
+        public void SetInterestRate(double interestRate)
+        {
+            this.interestRate = interestRate;
+        }
+        public void calcCompoundEscalation()
+        {
+            Result = (double)Convert.ToDecimal(firstNumber * Math.Pow(1 + (interestRate / 100),
+                escalationYears));
         }
         public void SetStartDate(DateTime startDate)
         {
